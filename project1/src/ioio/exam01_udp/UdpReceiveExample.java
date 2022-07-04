@@ -4,12 +4,16 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 
 public class UdpReceiveExample extends Thread {
+	
 	public static void main(String[] args) throws Exception {
+		
 		DatagramSocket datagramSocket = new DatagramSocket(5001);
 		
 		Thread thread = new Thread() {
+			
 			@Override
 			public void run() {
+				
 				System.out.println("[수신 시작]");
 				try {
 					while(true) {
@@ -21,12 +25,17 @@ public class UdpReceiveExample extends Thread {
 					}
 				} catch (Exception e) {
 					System.out.println("[수신 종료]");
-				}
-			}			
-		};
+				} // try - catch
+				
+			} // run()
+			
+		}; // Thread
+		
 		thread.start();
 		
 		Thread.sleep(10000);
 		datagramSocket.close();
-	}
-}
+		
+	} // main
+	
+} // end class

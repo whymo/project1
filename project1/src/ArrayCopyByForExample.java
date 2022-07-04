@@ -9,7 +9,7 @@ public class ArrayCopyByForExample {
 		int[] oldIntArray = {1, 2, 3};
 		int[] newIntArray =  new int[5]; 		// 5개의 자리
 		
-//		--
+//		-----------------------------------------
 		
 		
 		for(int i=0; i < oldIntArray.length; i++) {
@@ -19,7 +19,7 @@ public class ArrayCopyByForExample {
 		} //classical for
 		
 		
-//		----
+//		-----------------------------------------
 		
 		for(int i=0; i < newIntArray.length; i++ ) {
 			

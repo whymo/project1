@@ -46,6 +46,8 @@ public class Baekjoon_1449_수리공 {
 			
 		} // outer for
 		
+		System.out.println(count);
+		
 	} // main
 
 } // end class

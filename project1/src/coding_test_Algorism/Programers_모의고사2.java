@@ -60,6 +60,7 @@ public class Programers_모의고사2 {
         int [] answer = new int [list.size()];
         int count = 0;
         
+        // 리스트에서 배열로 옮긴다.
         for ( int a : list ) {
         	answer[count ++] = a;
         } // enhanced for

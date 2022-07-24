@@ -1,6 +1,7 @@
 package coding_test_Algorism;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Programers_모의고사2 {
@@ -68,5 +69,15 @@ public class Programers_모의고사2 {
         return answer;
         
     } // solution
+	
+	public static void main(String[] args) {
+		
+		int [] answers = { 1, 2, 3, 4, 5 };
+		
+		Programers_모의고사2 test = new Programers_모의고사2();
+		
+		System.out.println(Arrays.toString(test.solution(answers)));
+		
+	} // main
 
 } //end class

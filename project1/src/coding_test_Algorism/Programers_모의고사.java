@@ -1,5 +1,7 @@
 package coding_test_Algorism;
 
+import java.util.Arrays;
+
 public class Programers_모의고사 {
 	
 	public int[] solution(int[] answers) {
@@ -99,5 +101,15 @@ public class Programers_모의고사 {
         return answer;
         
     } // solution
+	
+	public static void main(String[] args) {
+		
+		int [] answers = { 1, 2, 3, 4, 5 };
+		
+		Programers_모의고사 test = new Programers_모의고사();
+		
+		System.out.println(Arrays.toString(test.solution(answers)));
+		
+	} // main
 
 } //end class

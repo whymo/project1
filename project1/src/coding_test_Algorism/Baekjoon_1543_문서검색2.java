@@ -2,12 +2,15 @@ package coding_test_Algorism;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class Baekjoon_1543_문서검색2 {
 	
 	public static void main (String[]args) throws Exception {
 		
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		// br은 공백이 문서에 포함될 경우에는 인식하지 못한다.
+		// BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		Scanner sc = new Scanner(System.in);
 		
 		// ============================================================================================
 		// 문제 :
@@ -15,10 +18,12 @@ public class Baekjoon_1543_문서검색2 {
 		// ============================================================================================
 		
 		// 문서 ( ex. ababababa )
-		String str = br.readLine();
+		// String str = br.readLine();
+		String str = sc.nextLine();
 		
 		// 찾을 단어 ( ex. aba )
-		String word = br.readLine();
+		// String word = br.readLine();
+		String word = sc.nextLine();
 		
 		// 단어가 몇번 등장하는지 카운트하는 변수
 		int count = 0;
@@ -28,7 +33,7 @@ public class Baekjoon_1543_문서검색2 {
 		
 		// ============================================================================================
 		
-		for ( int i = idx; i < str.length() - word.length(); i ++ ) {
+		for ( int i = idx; i <= str.length() - word.length(); i ++ ) {
 			// 문서에서 단어를 검색할 때 a.length() - b.length()를 하는 이유는
 			// 단어 b가 모두 나와야하기 때문에 b보다 문장길이가 작으면 더 이상 검색을 시작할 이유가 없기 때문이다.
 			
@@ -55,7 +60,7 @@ public class Baekjoon_1543_문서검색2 {
 				// true일 경우
 				count ++;
 				idx += word.length(); // 다음 문자열부터 검색가능하도록 인덱스 조정
-				i = idx - 1;
+				i = idx - 1; // idx에서 -1을 하는 이유는 밖의 for에서 +1을 해주고 있기 때문이다.
 				
 			} else {
 				

@@ -22,6 +22,8 @@ public class Programers_가운데글자가져오기 {
             
             // 짝수라면
             // 문자열.substring(시작인덱스번호, 끝인덱스번호); (****)
+        	// 인덱스 번호는 0부터 시작하기 때문에 -1을 해줘야 한다.
+        	
             // 끝 인덱스 번호는 포함되지 않는다.
             // 시작 인덱스는 포함이 된다.
             answer = s.substring( middle - 1, middle + 1 );
@@ -29,6 +31,9 @@ public class Programers_가운데글자가져오기 {
         } else {
             
             // 홀수라면
+        	// 문자열.substring(시작인덱스번호, 끝인덱스번호); (****)
+        	// 홀 수일 경우에는 오히려 2로 나눈 수에서 +1을 해줘야 하지만
+        	// 인덱스 번호는 0부터 시작하기에 그냥 middle부터 시작하면 된다.
             answer = s.substring( middle, middle+1 );
         
         } // if : 짝수일때는 2글자 홀수일때는 1글자를 반환

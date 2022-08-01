@@ -1,5 +1,7 @@
 package coding_test_Algorism;
 
+import java.util.Scanner;
+
 public class Baekjoon_2847_게임을만든동준이 {
 	
 	public static void main (String [] args) {
@@ -21,6 +23,48 @@ public class Baekjoon_2847_게임을만든동준이 {
 		// 높은 레벨보다 낮은 레벨의 점수가 높지 않도록 낮추면 되는 것이다.
 		// -1 점마다 카운트하면 안된다.
 		// ===========================================================================
+		
+		Scanner sc = new Scanner(System.in);
+		
+		// 문제의 총 개수
+		int n = sc.nextInt();
+		
+		// 문제의 점수를 원소로 넣는 배열
+		int [] arr = new int [n];
+		
+		// 배열에 원소 넣기
+		for ( int i = 0; i < n; i++ ) {
+			arr[i] = sc.nextInt();
+		} // for
+		
+		// 감소시키는 횟수
+		int count = 0;
+		
+		// 낮은 레벨이 높은 레벨보다 점수가 높으면 감소시켜야 한다.
+		// 높은 레벨부터 낮은 레벨로 탐색한다.
+		// n - 2하는 이유는 인덱스 번호는 0번부터 시작하며,
+		// 가장 높은 레벨의 경우에는 감소시킬 필요가 없기에
+		// n - 2회만 해도 된다.
+		for ( int i = n - 2; i < n; i-- ) {
+			
+			if ( arr[i] >= arr[i+1] ) {
+				
+				// 낮은 레벨보다 높은 레벨의 점수가 높아야 하기에
+				// 낮은 레벨 점수 - 높은 레벨 점수 + 1을 통해서
+				// 무조건 높은 레벨보다 낮은 레벨 점수가 1만큼 작게 설정한다.
+				int ttt = arr[i] - arr[i+1] + 1;
+				
+				// -1만큼 카운트 해줘야 하기에
+				// ttt만큼 count에 더해주면 된다.
+				count += ttt;
+				
+				arr[i] -= ttt;
+						
+			} // if : 낮은 레벨의 점수를 감소시켜야 할때
+			
+		} // for2
+		
+		System.out.println(count);
 		
 	} // main
 

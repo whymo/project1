@@ -34,7 +34,7 @@ public class Programers_숫자문자열과영단어 {
 		
 		Programers_숫자문자열과영단어 test = new Programers_숫자문자열과영단어();
 		
-		test.solution("12121");
+		System.out.println(test.solution("12121"));
 		
 	} // main
 

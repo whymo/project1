@@ -1,8 +1,11 @@
 package coding_test_Algorism;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 public class Baekjoon_1080_행렬 {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		
 		// ===============================================================================================
 		// 문제 :
@@ -12,6 +15,14 @@ public class Baekjoon_1080_행렬 {
 		// 행렬A를 행렬B로 바꾸는데 필요한 연산(부분행렬 변환)의 최솟값을 구하여라
 		// 행렬A를 행렬B로 변환할 수 없다면 -1을 출력
 		// ===============================================================================================
+		
+		// BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		// int a = Integer.parseInt(br.readLine());
+		
+		int f = -4 -4;
+		
+		System.out.println(f);
 		
 	} // main
 

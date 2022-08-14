@@ -36,6 +36,7 @@ public class Programers_숫자문자열과영단어 {
 		
 		System.out.println(test.solution("12121"));
 		
+		
 	} // main
 
 } // end class

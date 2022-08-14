@@ -27,8 +27,6 @@ public class Programers_완주하지못한선수 {
 	     // String이 key이고, Integer이 value이다.
 	     // Integer이 있는 이유는 동명이인을 구분하기 위해서이다.
 	     
-	//      ====================================================================
-	     
 	     for ( String runner : participant ) {
 	         
 	         run.put( runner, run.getOrDefault(runner, 0) +1 );
@@ -78,5 +76,16 @@ public class Programers_완주하지못한선수 {
 	     return answer; // 완주하지 못하는 선수 ( 1명 )
 	     
 	 } // end solution
+	
+	public static void main(String[] args) {
+		
+		String [] participant = {"A", "B", "C", "D"};
+		String [] completion = {"A", "B", "D"};
+		
+		Programers_완주하지못한선수 test = new Programers_완주하지못한선수();
+		
+		System.out.println(test.solution(participant, completion));
+		
+	} // main
 
 } // end class

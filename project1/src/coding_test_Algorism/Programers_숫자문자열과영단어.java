@@ -14,6 +14,28 @@ public class Programers_숫자문자열과영단어 {
 	// 10203 <- "1zerotwozero3"
 	// ===========================================================================
 	
-	public static void main(String[] args) { } // main
+	public int solution (String s) {
+		
+		int answer = 0;
+		
+		String [] num = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+		String [] word = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight" };
+		
+		for ( int i = 0; i < word.length; i++ ) {
+			s = s.replace(word[i], num[i]);
+		} // for
+		
+		answer = Integer.parseInt(s);
+		return answer;
+		
+	} // solution
+	
+	public static void main(String[] args) {
+		
+		Programers_숫자문자열과영단어 test = new Programers_숫자문자열과영단어();
+		
+		test.solution("12121");
+		
+	} // main
 
 } // end class

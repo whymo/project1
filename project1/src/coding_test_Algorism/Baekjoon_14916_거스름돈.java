@@ -40,7 +40,7 @@ public class Baekjoon_14916_거스름돈 {
 			// + 하지만 나누어 떨어지지 않을 경우에는 -2로 인해 음수가 된다.
 			if ( N < 0 ) {
 				System.out.println(-1);
-				break;
+				return;
 			}
 			
 		} // while

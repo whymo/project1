@@ -37,6 +37,7 @@ public class Programers_kakao_키패드 {
                 int rightlist = Math.abs(n - right) / 3 + Math.abs(n - right) % 3;
                 // + Math.abs는 절대값을 반환한다.
                 // + 이 식은 현재 쳐야될 키패드의 위치와 현재 오른손의 위치를 절대값으로 구한 것이다.
+                // + 위 아래로 움직일 때는 '/3 ' 을 해주고, 좌 우 로 움직이는 거리는 '%3'
                 
                 if ( letflist < rightlist ) {
                     // + 왼손이 더 가까울 경우에는 왼손이 한다.
